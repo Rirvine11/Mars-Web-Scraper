@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="UTF-8">
+  <title>Mission to Mars!</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class = "container-fluid">
+    <!--Jumbotron / scrape button-->
+    <div class="jumbotron">
+        <div class = container-fluid>
+            <div class ="col-md-12 text-center">
+                        
+                <h1 class="display-4">Mission to Mars </h1>
+                
+                <a class="btn btn-primary btn-lg" href="/scrape" role="button">Scrape Mars</a>
+            </div>
+        </div>
+            
+    </div>
+    <!--END JUMBOTRON-->
+    
+    <!--TOP Card Layouts-->
+    <div class = "container-fluid" > 
+        <div class = "row">
+            <div class = "col-md-12 pb-2" >
+                <!--news card-->
+                <div class = "container-fluid">         
+                    <div class = "row">      
+                        <div class = "col-md-6 mt-2">
+                            <div class="card ">
+                                <div class = "card-header">
+                                Martian News
+                                </div>
+                                <div class = 'card-body'>
+                                    <h5 class = "card-title"> {{input_data.news_title}} </h5>
+                                    <p class = "card-text">{{input_data.news_p}}</p>
+                                </div>
+                            </div>    
+                        </div>    
+                    </div>
+                </div>
+                <!--weather card-->
+                <div class = "container-fluid">
+                    <div class = "row">
+                        <div class = "col-md-5 offset-md-7 mr-5 pb-2 ">
+                            <div class="card ">
+                                <h4 class = "card-title">Current Weather on Mars</h4>
+                                <p class = "card-text">{{input_data.mars_weather}}</p>
+                            </div>
+                        </div>
+                    </div>   
+                </div>
+            </div>  
+        </div>              
+    </div>
+     <!--Second Row-->
+    <div class = "container-fluid">              
+        <div class = "row ">
+            <!--Featured Image Card-->
+            <div class = "col-md-7">
+                    <div class="card">
+                        <h4 class = "card-title">Featured Mars Image</h4>
+                        <p class = "card-text"><img src={{input_data.featured_image_url}} alt= "Featured image from Mars"></p>
+                    </div>
+            </div>               
+            <!--Martian Facts-->             
+        <div class = "col-md-4">
+            <div class="card">
+                <h4 class = "card-title">Martian Facts</h4>
+                <table>
+                    <tr>
+                        <th>Facts:</th>
+                        <th></th>
+                    </tr>
+                    <tr>
+                        <td>{{input_data.mars_table.0.Fact}}</td>
+                        <td>{{input_data.mars_table.0.Data}}</td>
+                    </tr>
+                    <tr>
+                        <td>{{input_data.mars_table.1.Fact}}</td>
+                        <td>{{input_data.mars_table.1.Data}}</td>
+                    </tr>
+                    <tr>
+                            <td>{{input_data.mars_table.2.Fact}}</td>
+                            <td>{{input_data.mars_table.2.Data}}</td>
+                    </tr>
+                    <tr>
+                            <td>{{input_data.mars_table.3.Fact}}</td>
+                            <td>{{input_data.mars_table.3.Data}}</td>
+                    </tr>
+                    <tr>
+                            <td>{{input_data.mars_table.4.Fact}}</td>
+                            <td>{{input_data.mars_table.4.Data}}</td>
+                    </tr>
+                    <tr>
+                            <td>{{input_data.mars_table.5.Fact}}</td>
+                            <td>{{input_data.mars_table.5.Data}}</td>
+                    </tr>
+                    <tr>
+                            <td>{{input_data.mars_table.6.Fact}}</td>
+                            <td>{{input_data.mars_table.6.Data}}</td>
+                    </tr>
+                    <tr>
+                            <td>{{input_data.mars_table.7.Fact}}</td>
+                            <td>{{input_data.mars_table.7.Data}}</td>
+                    </tr>
+                    <tr>
+                            <td>{{input_data.mars_table.8.Fact}}</td>
+                            <td>{{input_data.mars_table.8.Data}}</td>
+                    </tr>
+                
+                </table>
+            </div>
+        </div>
+        
+        </div> 
+    </div>        
+    <!--Martian Enhanced Hemisphere Images-->
+    <div class = "container-fluid">
+        <div class = "row">
+                <div class = "col-md-12 mb-2">
+                        <h4 class= "text-center">Martian Hemispheres</h4>
+                </div>        
+        </div>        
+        <div class = "row">
+                        <div class = "col-md-5 mx-5 px-3">
+                            <div class ="card">
+                                    <img class="card-img-top" src={{input_data.hemispheres.Image.0}} alt= "Featured image from Mars"></p>
+                                    <div class= "card-footer">{{input_data.hemispheres.title.0}}</div>
+                            </div>
+                        </div>
+                        <div class = "col-md-5 mx-5 px-3">
+                            <div class ="card">
+                                    <img class="card-img-top" src={{input_data.hemispheres.Image.1}} alt= "Featured image from Mars"></p>
+                                    <div class= "card-footer">{{input_data.hemispheres.title.1}}</div>
+                            </div>
+                        </div>
+                        <div class = "col-md-5 mx-5 px-3">
+                                <div class ="card">
+                                        <img class="card-img-top" src={{input_data.hemispheres.Image.2}} alt= "Featured image from Mars"></p>
+                                        <div class= "card-footer">{{input_data.hemispheres.title.2}}</div>
+                                </div>
+                         </div>
+                        <div class = "col-md-5 mx-5 px-3">
+                                <div class ="card">
+                                        <img class="card-img-top" src={{input_data.hemispheres.Image.3}} alt= "Featured image from Mars"></p>
+                                        <div class= "card-footer">{{input_data.hemispheres.title.3}}</div>
+                                </div>
+                        </div>
+ 
+        </div>    
+    </div>  
+</div>
+        
+     
+    <!--END CARD LAYOUT--> 
+ 
+</body>
+</html>
